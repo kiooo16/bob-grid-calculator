@@ -1,2 +1,21 @@
 # bob-grid-calculator
-A simple calculator for neutral grid trading risk and profit estimation.
+
+一个简易的中性合约网格盈亏计算器（纯前端）。
+
+## 使用
+
+直接在浏览器打开 `index.html`，或在仓库根目录启动静态服务：
+
+```bash
+python3 -m http.server 4173
+```
+
+然后访问 `http://localhost:4173`。
+
+## 功能
+
+输入：下沿、上沿、网格数、每格数量、保证金、杠杆、下止损、上止损、启动价、ATR（可选）。
+
+输出：区间宽度比例、最大亏损额、最大亏损率、风险等级、预计日净收益额、预计日收益率、盈利效率评级。
+
+说明：向下和向上止损分别估算亏损，取更大值作为最大亏损；ATR 仅用于粗略估算日内有效成交次数。

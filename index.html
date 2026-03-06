@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中性合约网格盈亏计算器</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>中性合约网格盈亏计算器</h1>
+    <p class="hint">用于快速手动试参数，结果为估算值，不构成投资建议。</p>
+
+    <section class="card form-grid">
+      <label>下沿 <input type="number" id="lower" value="2400" min="0" step="any" /></label>
+      <label>上沿 <input type="number" id="upper" value="3200" min="0" step="any" /></label>
+      <label>网格数 <input type="number" id="gridCount" value="20" min="1" step="1" /></label>
+      <label>每格数量（标的币） <input type="number" id="qtyPerGrid" value="0.01" min="0" step="any" /></label>
+      <label>保证金（USDT） <input type="number" id="margin" value="500" min="0" step="any" /></label>
+      <label>杠杆 <input type="number" id="leverage" value="5" min="1" step="1" /></label>
+      <label>下止损 <input type="number" id="stopLower" value="2200" min="0" step="any" /></label>
+      <label>上止损 <input type="number" id="stopUpper" value="3400" min="0" step="any" /></label>
+      <label>启动价 <input type="number" id="startPrice" value="2800" min="0" step="any" /></label>
+      <label>ATR（可选） <input type="number" id="atr" placeholder="如 120" min="0" step="any" /></label>
+    </section>
+
+    <section class="card results">
+      <h2>输出结果</h2>
+      <ul>
+        <li><span>区间宽度比例</span><strong id="rangeRatio">-</strong></li>
+        <li><span>当前启动价最大亏损额</span><strong id="maxLoss">-</strong></li>
+        <li><span>当前启动价最大亏损率</span><strong id="maxLossRate">-</strong></li>
+        <li><span>风险等级</span><strong id="riskLevel">-</strong></li>
+        <li><span>预计日净收益额</span><strong id="dailyNet">-</strong></li>
+        <li><span>预计日收益率</span><strong id="dailyRate">-</strong></li>
+        <li><span>盈利效率评级</span><strong id="efficiency">-</strong></li>
+      </ul>
+      <p class="explain" id="detail"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
