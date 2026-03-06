@@ -1,0 +1,87 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2a44;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.hint {
+  margin: 6px 0 0;
+  color: #5f6b85;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(31, 42, 68, 0.08);
+  padding: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+input {
+  border: 1px solid #d8deea;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.results h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.results li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #e5eaf3;
+  padding-bottom: 6px;
+}
+
+.results strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.explain {
+  margin-top: 12px;
+  color: #5f6b85;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
